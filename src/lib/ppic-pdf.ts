@@ -131,7 +131,7 @@ export function generateSuratPotong(o: MasterOrder, sourceStock?: { sheet_width:
   doc.setLineWidth(0.3);
   // Left: Source
   doc.rect(15, 75, 87, 60);
-  doc.setFillColor(245);
+  doc.setFillColor(245, 245, 245);
   doc.rect(15, 75, 87, 8, "F");
   doc.setFont("helvetica", "bold");
   doc.setFontSize(9);
@@ -144,7 +144,7 @@ export function generateSuratPotong(o: MasterOrder, sourceStock?: { sheet_width:
 
   // Right: Target
   doc.rect(108, 75, 87, 60);
-  doc.setFillColor(245);
+  doc.setFillColor(245, 245, 245);
   doc.rect(108, 75, 87, 8, "F");
   doc.setFont("helvetica", "bold");
   doc.setFontSize(9);

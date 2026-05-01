@@ -173,7 +173,7 @@ export function generateSuratPotong(o: MasterOrder, sourceStock?: { sheet_width:
   doc.setFontSize(8);
   cols.forEach((c) => {
     doc.setFont("helvetica", "bold");
-    doc.text(c.label, c.x, 183);
+    doc.text(String(c.label), c.x, 183);
     doc.setFont("helvetica", "normal");
     doc.text(c.name, c.x, 189);
     doc.line(c.x, 205, c.x + 55, 205);
@@ -186,7 +186,7 @@ export function generateSuratPotong(o: MasterOrder, sourceStock?: { sheet_width:
   doc.setLineDashPattern([], 0);
   doc.setFontSize(7);
   doc.setTextColor(120);
-  doc.text("- - - GUNTING DI SINI - - -", 95, 229);
+  doc.text(String("- - - GUNTING DI SINI - - -"), 95, 229);
   doc.setTextColor(0);
 
   // Tag

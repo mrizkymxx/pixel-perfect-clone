@@ -14,7 +14,126 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      app_settings: {
+        Row: {
+          key: string
+          updated_at: string
+          value: string | null
+        }
+        Insert: {
+          key: string
+          updated_at?: string
+          value?: string | null
+        }
+        Update: {
+          key?: string
+          updated_at?: string
+          value?: string | null
+        }
+        Relationships: []
+      }
+      master_orders: {
+        Row: {
+          article_number: string | null
+          box_type: string | null
+          catatan_ppic: string | null
+          created_at: string
+          customer_name: string | null
+          delivery_date: string | null
+          is_finished: boolean
+          is_released: boolean
+          outgoing_instructions: string | null
+          qty_order: number | null
+          scheduling_number: string | null
+          sheet_length: number | null
+          sheet_width: number | null
+          spk_number: string
+          status_bahan: string
+          status_karet: string
+          status_mounting: string
+          status_voting: string | null
+          substance: string | null
+          updated_at: string
+        }
+        Insert: {
+          article_number?: string | null
+          box_type?: string | null
+          catatan_ppic?: string | null
+          created_at?: string
+          customer_name?: string | null
+          delivery_date?: string | null
+          is_finished?: boolean
+          is_released?: boolean
+          outgoing_instructions?: string | null
+          qty_order?: number | null
+          scheduling_number?: string | null
+          sheet_length?: number | null
+          sheet_width?: number | null
+          spk_number: string
+          status_bahan?: string
+          status_karet?: string
+          status_mounting?: string
+          status_voting?: string | null
+          substance?: string | null
+          updated_at?: string
+        }
+        Update: {
+          article_number?: string | null
+          box_type?: string | null
+          catatan_ppic?: string | null
+          created_at?: string
+          customer_name?: string | null
+          delivery_date?: string | null
+          is_finished?: boolean
+          is_released?: boolean
+          outgoing_instructions?: string | null
+          qty_order?: number | null
+          scheduling_number?: string | null
+          sheet_length?: number | null
+          sheet_width?: number | null
+          spk_number?: string
+          status_bahan?: string
+          status_karet?: string
+          status_mounting?: string
+          status_voting?: string | null
+          substance?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      stock_materials: {
+        Row: {
+          allocated_to: string | null
+          id: number
+          qty_available: number | null
+          qty_palet: number | null
+          sheet_length: number | null
+          sheet_width: number | null
+          substance: string | null
+          synced_at: string
+        }
+        Insert: {
+          allocated_to?: string | null
+          id?: number
+          qty_available?: number | null
+          qty_palet?: number | null
+          sheet_length?: number | null
+          sheet_width?: number | null
+          substance?: string | null
+          synced_at?: string
+        }
+        Update: {
+          allocated_to?: string | null
+          id?: number
+          qty_available?: number | null
+          qty_palet?: number | null
+          sheet_length?: number | null
+          sheet_width?: number | null
+          substance?: string | null
+          synced_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
